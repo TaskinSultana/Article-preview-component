@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(212, 23%, 69%);
+}
+.main {
+  max-width: 50%;
+  min-height: 40vh;
+  display: flex;
+}
+.main > *:first-child {
+  flex: 1 1 40%;
+}
+.main > *:last-child {
+  flex: 1 1 60%;
+}
+
+.main .image img {
+  max-width: 100%;
+  height: 100%;
+  display: block;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.main .text {
+  background-color: hsl(210, 46%, 95%);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 10px 30px;
+}
+.text h3 {
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Manrope", sans-serif;
+  padding: 10px 0px;
+  color: hsl(217, 19%, 35%);
+}
+.text p {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 0px;
+  padding-bottom: 15px;
+  color: hsl(214, 17%, 51%);
+}
+.text .flex {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.flex .flex2 {
+  display: flex;
+}
+.flex2 > img {
+  width: 45px;
+  height: 45px;
+  clip-path: circle();
+  margin-right: 20px;
+}
+.flex2 .name {
+  font-size: 13px;
+  font-weight: 700;
+  color: hsl(217, 19%, 35%);
+  padding-bottom: 5px;
+}
+.flex2 .date {
+  font-size: 12px;
+  font-weight: 500;
+  color: hsl(214, 17%, 51%);
+}
+.flex .inner-image {
+  width: 25px;
+  height: 25px;
+  margin-top: 10px;
+  margin-right: 5px;
+  padding: 4px;
+  border: 1px solid hsl(212, 23%, 69%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.inner-image img {
+  width: 100%;
+  height: 100%;
+  clip-path: circle();
+}
+
+/* start */
+
+.flex .social {
+  position: absolute;
+  top: -45%;
+  right: -11%;
+  width: 120px;
+  height: 50px;
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    66% 76%,
+    53% 97%,
+    41% 75%,
+    0% 75%
+  );
+  background-color: hsl(217, 19%, 35%);
+  color: aliceblue;
+  display: none;
+  cursor: pointer;
+}
+.social img {
+  width: 20px;
+  height: 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 1060px) {
+  .flex .social {
+    right: -15%;
+  }
+}
+
+@media (max-width: 900px) {
+  .main {
+    max-width: 70%;
+    min-height: 40vh;
+    display: flex;
+  }
+}
+
+@media (max-width: 640px) {
+  .main {
+    max-width: 90%;
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0px;
+  }
+  .flex .social {
+    top: -43%;
+    right: -8%;
+  }
+  .main .image img {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 10px;
+  }
+  .main .text {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .flex .social {
+    top: -52%;
+    right: -12%;
+  }
+  .text h3 {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Manrope", sans-serif;
+    padding: 10px 0px;
+    color: hsl(217, 19%, 35%);
+  }
+  .text p {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 0px;
+    text-align: justify;
+    color: hsl(214, 17%, 51%);
+  }
+  .flex .inner-image {
+    width: 30px;
+    height: 30px;
+    margin-top: 6px;
+    margin-right: 8px;
+    padding: 4px;
+    border: 1px solid hsl(212, 23%, 69%);
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
